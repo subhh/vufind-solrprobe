@@ -1,0 +1,24 @@
+{
+    "name": "subhh/vufind-solrprobe",
+    "description": "VuFindSearch listener that collects information about the interaction with the search server",
+    "authors": [
+        {
+            "name": "David Maus",
+            "email": "david.maus@sub.uni-hamburg.de"
+        }
+    ],
+    "homepage": "https://github.com/subhh/vufind-solrprobe",
+    "license": "GPL-3.0-or-later",
+    "support": {
+        "issues": "https://github.com/subhh/vufind-solrprobe/issues"
+    },
+    "autoload": {
+        "psr-4": {
+            "SUBHH\\VuFind\\SolrProbe\\": [ "src/main/php", "src/test/php"]
+        }
+    },
+    "require-dev": {
+        "vufind/vufind": "^8.1",
+        "ahand/mobileesp": "dev-master"
+    }
+}
