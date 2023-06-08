@@ -104,6 +104,7 @@ final class SolrProbe
                     $result = $command->getResult();
                     if ($result instanceOf RecordCollection) {
                         if (method_exists($result, 'getResponseHeader')) {
+                            // @phan-suppress-next-line PhanUndeclaredMethod
                             $header = $result->getResponseHeader();
                             if (array_key_exists('QTime', $header)) {
                                 $log->solrInternalQueryTime = $header['QTime'];
