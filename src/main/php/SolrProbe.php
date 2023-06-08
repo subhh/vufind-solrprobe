@@ -30,7 +30,6 @@ use VuFindSearch\Service;
 use Laminas\EventManager\EventInterface;
 use Laminas\EventManager\SharedEventManagerInterface;
 
-use UnexpectedValueException;
 use SplObjectStorage;
 
 final class SolrProbe
