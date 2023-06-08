@@ -46,7 +46,8 @@ final class LogfileHandler implements LogEntryHandler
             'duration' => strval($logEntry->solrRequestEnd - $logEntry->solrRequestStart),
             'qtime' => $logEntry->solrInternalQueryTime,
             'status' => $logEntry->solrRequestStatus,
-            'statuscode' => $logEntry->solrRequestStatusCode
+            'statuscode' => $logEntry->solrRequestStatusCode,
+            'requestUri' => $logEntry->requestUri,
         ];
         $message = date('c') . ' ' . json_encode($payload) . PHP_EOL;
         if (fwrite($this->logfile, $message) === false) {

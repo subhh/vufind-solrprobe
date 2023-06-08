@@ -81,6 +81,9 @@ final class SolrProbe
             $log->requestId = $this->requestId;
             $log->sessionId = $this->sessionId;
             $log->solrRequestStart = intval(hrtime(true) / 1000000);
+            if (array_key_exists('REQUEST_URI', $_SERVER)) {
+                $log->requestUri = $_SERVER['REQUEST_URI'];
+            }
             $this->requests->attach($command, $log);
         } else {
             $this->warn('Received a VuFindSearch .pre event without a command');

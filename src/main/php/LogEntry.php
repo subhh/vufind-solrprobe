@@ -70,4 +70,9 @@ final class LogEntry
      */
     public $solrInternalQueryTime;
 
+    /**
+     * @var ?string
+     */
+    public $requestUri;
+
 }
