@@ -1,6 +1,6 @@
 # VuFind SolrProbe
 
-SolrProbe is copyright (c) 2022 by Staats- und Universitätsbibliothek Hamburg and released under the terms of the GNU
+SolrProbe is copyright (c) 2022,2023 by Staats- und Universitätsbibliothek Hamburg and released under the terms of the GNU
 General Public License v3.
 
 ## Description
@@ -17,6 +17,7 @@ gathers the following information:
 - Solr query time if available
 - Request status ("OK" or the exception class name)
 - Request status code ("200" or the exception code)
+- VuFind URL that triggered to interaction
 
 ## Usage
 

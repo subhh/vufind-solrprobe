@@ -17,7 +17,7 @@
  * along with SolrProbe. If not, see <https://www.gnu.org/licenses/>.
  *
  * @author    David Maus <david.maus@sub.uni-amburg.de>
- * @copyright (c) 2022 by Staats- und Universitätsbibliothek Hamburg
+ * @copyright (c) 2022,2023 by Staats- und Universitätsbibliothek Hamburg
  * @license   http://www.gnu.org/licenses/gpl.txt GNU General Public License v3 or higher
  */
 
