@@ -23,6 +23,8 @@
 
 namespace SUBHH\VuFind\SolrProbe;
 
+use DateTimeImmutable;
+
 final class LogEntry
 {
     /**
@@ -74,5 +76,10 @@ final class LogEntry
      * @var ?string
      */
     public $requestUri;
+
+    /**
+     * @var DateTimeImmutable
+     */
+    public $timestamp;
 
 }

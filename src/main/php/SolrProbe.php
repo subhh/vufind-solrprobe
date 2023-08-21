@@ -30,6 +30,7 @@ use VuFindSearch\Service;
 use Laminas\EventManager\EventInterface;
 use Laminas\EventManager\SharedEventManagerInterface;
 
+use DateTimeImmutable;
 use SplObjectStorage;
 
 final class SolrProbe
@@ -75,6 +76,7 @@ final class SolrProbe
         $command = $event->getParam('command');
         if ($command) {
             $log = new LogEntry();
+            $log->timestamp = new DateTimeImmutable();
             $log->backendId = $command->getTargetIdentifier();
             $log->command = (string)get_class($command);
             $log->requestId = $this->requestId;

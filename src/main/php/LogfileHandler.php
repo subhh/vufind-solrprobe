@@ -49,7 +49,7 @@ final class LogfileHandler implements LogEntryHandler
             'statuscode' => $logEntry->solrRequestStatusCode,
             'requestUri' => $logEntry->requestUri,
         ];
-        $message = date('c') . ' ' . json_encode($payload) . PHP_EOL;
+        $message = $logEntry->timestamp->format('c') . ' ' . json_encode($payload) . PHP_EOL;
         if (fwrite($this->logfile, $message) === false) {
             trigger_error('[SolrProbe] ERROR Unable to write to logfile');
         }
