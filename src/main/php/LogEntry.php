@@ -21,6 +21,8 @@
  * @license   http://www.gnu.org/licenses/gpl.txt GNU General Public License v3 or higher
  */
 
+declare(strict_types=1);
+
 namespace SUBHH\VuFind\SolrProbe;
 
 use DateTimeImmutable;
