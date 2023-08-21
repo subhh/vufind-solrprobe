@@ -101,6 +101,7 @@ final class SolrProbe
             if ($this->requests->contains($command)) {
                 $log = $this->requests->offsetGet($command);
                 $log->solrRequestEnd = intval(hrtime(true) / 1000000);
+                $log->solrRequestDuration = ($log->solrRequestStart - $log->solrRequestEnd);
                 $log->solrRequestStatus = 'OK';
                 $log->solrRequestStatusCode = 200;
 
@@ -134,6 +135,7 @@ final class SolrProbe
             if ($this->requests->contains($command)) {
                 $log = $this->requests->offsetGet($command);
                 $log->solrRequestEnd = intval(hrtime(true) / 1000000);
+                $log->solrRequestDuration = ($log->solrRequestStart - $log->solrRequestEnd);
 
                 $error = $event->getParam('error');
                 if ($error) {

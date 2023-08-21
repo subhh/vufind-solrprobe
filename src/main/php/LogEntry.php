@@ -60,6 +60,11 @@ final class LogEntry
     public $solrRequestEnd;
 
     /**
+     * @var ?int
+     */
+    public $solrRequestDuration;
+
+    /**
      * @var ?string
      */
     public $solrRequestStatus;

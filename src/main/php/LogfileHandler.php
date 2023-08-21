@@ -45,7 +45,7 @@ final class LogfileHandler implements LogEntryHandler
             'command' => $logEntry->command,
             'sessionId' => $logEntry->sessionId,
             'requestId' => $logEntry->requestId,
-            'duration' => strval($logEntry->solrRequestEnd - $logEntry->solrRequestStart),
+            'duration' => strval($logEntry->solrRequestDuration),
             'qtime' => $logEntry->solrInternalQueryTime,
             'status' => $logEntry->solrRequestStatus,
             'statuscode' => $logEntry->solrRequestStatusCode,
