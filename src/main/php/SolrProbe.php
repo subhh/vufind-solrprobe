@@ -80,7 +80,7 @@ final class SolrProbe
             $log = new LogEntry();
             $log->timestamp = new DateTimeImmutable();
             $log->backendId = $command->getTargetIdentifier();
-            $log->command = (string)get_class($command);
+            $log->command = get_class($command) ?: null;
             $log->requestId = $this->requestId;
             $log->sessionId = $this->sessionId;
             $log->solrRequestStart = intval(hrtime(true) / 1000000);
