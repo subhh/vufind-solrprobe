@@ -20,7 +20,7 @@ before_script:
   - apt-get install -yqq gpg
   # Install Phive
   - curl -L -o phive.phar https://phar.io/releases/phive.phar
-  - php phive.phar install
+  - php phive.phar --force-accept-unsigned install
   # Install and run Composer
   - curl -sS https://getcomposer.org/installer | php
   - php composer.phar install
