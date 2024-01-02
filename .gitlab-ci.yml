@@ -18,6 +18,7 @@ cache:
 before_script:
   - apt-get update -yqq
   - apt-get install -yqq gpg
+  - docker-php-ext-install intl
   # Install Phive
   - curl -L -o phive.phar https://phar.io/releases/phive.phar
   - php phive.phar install --trust-gpg-keys 4AA394086372C20A,8101FB57DD8130F0,CF1A108D0E7AE720
