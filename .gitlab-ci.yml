@@ -18,7 +18,7 @@ cache:
 before_script:
   - apt-get update -yqq
   # Install Phive
-  - curl -sS https://phar.io/releases/phive.phar
+  - curl -sS -L https://phar.io/releases/phive.phar
   - php phive.phar install
   # Install and run Composer
   - curl -sS https://getcomposer.org/installer | php
