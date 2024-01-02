@@ -20,12 +20,10 @@ before_script:
   - apt-get install -yqq gpg
   # Install Phive
   - curl -L -o phive.phar https://phar.io/releases/phive.phar
-  - chmod +x phive.phar
-  - ./phive.phar --trust-gpg-keys 4AA394086372C20A,2A8299CE842DD38C install
+  - php phive.phar install --trust-gpg-keys 4AA394086372C20A,2A8299CE842DD38C
   # Install and run Composer
   - curl -sS https://getcomposer.org/installer | php
-  - chmod +x composer.phar
-  - ./composer.phar install
+  - php composer.phar install
 
 
 
