@@ -17,7 +17,7 @@ cache:
 
 before_script:
   - apt-get update -yqq
-  - apt-get install -yqq gpg
+  - apt-get install -yqq gpg libicu-dev
   - docker-php-ext-install intl
   # Install Phive
   - curl -L -o phive.phar https://phar.io/releases/phive.phar
