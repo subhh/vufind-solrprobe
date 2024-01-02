@@ -25,6 +25,7 @@ before_script:
   - php phive.phar install --trust-gpg-keys 4AA394086372C20A,8101FB57DD8130F0,CF1A108D0E7AE720
   # Install and run Composer
   - curl -sS https://getcomposer.org/installer | php
+  - php composer.phar config --no-plugins allow-plugins.wikimedia/composer-merge-plugin true
   - php composer.phar install
 
 
