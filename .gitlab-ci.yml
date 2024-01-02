@@ -17,6 +17,7 @@ cache:
 
 before_script:
   - apt-get update -yqq
+  - apt-get install gpg
   # Install Phive
   - curl -L -o phive.phar https://phar.io/releases/phive.phar
   - php phive.phar install
